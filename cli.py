@@ -647,7 +647,7 @@ class dump(DumpCommand):
              "scale": scale}, oned_as="row")
 
     def dumpxml(self, file, data):
-        file.write("<annotations count=\"{0}\">\n".format(len(data)))
+        file.write("<annotations count=\"{0}\" tags=\"start-of-segment-outside-bugfix\">\n".format(len(data)))
         for id, track in enumerate(data):
             file.write("\t<track id=\"{0}\" label=\"{1}\">\n"
                 .format(id, track.label))
